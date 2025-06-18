@@ -40,7 +40,7 @@ Katha is a backend service for managing shared expenses, inspired by Splitwise. 
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/sreekar2307/katha.git 
    cd katha
    ```
 
