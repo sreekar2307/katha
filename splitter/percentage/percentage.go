@@ -4,11 +4,11 @@ import (
 	"context"
 	stdErrors "errors"
 	"fmt"
-	"github.com/sreekar2307/katha/model"
+	"github.com/sreekar2307/khata/model"
 
-	"github.com/sreekar2307/katha/errors"
-	"github.com/sreekar2307/katha/model/table"
-	"github.com/sreekar2307/katha/splitter"
+	"github.com/sreekar2307/khata/errors"
+	"github.com/sreekar2307/khata/model/table"
+	"github.com/sreekar2307/khata/splitter"
 )
 
 func NewPercentageSplitter() splitter.Splitter {

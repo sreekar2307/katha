@@ -3,8 +3,8 @@ package http
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/sreekar2307/katha/config"
-	"github.com/sreekar2307/katha/controller/http/middleware"
+	"github.com/sreekar2307/khata/config"
+	"github.com/sreekar2307/khata/controller/http/middleware"
 	"net/http"
 )
 

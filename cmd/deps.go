@@ -2,17 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/sreekar2307/katha/config"
-	"github.com/sreekar2307/katha/db/sql"
-	"github.com/sreekar2307/katha/pkg/jwt"
-	"github.com/sreekar2307/katha/pkg/jwt/jwtgo"
-	"github.com/sreekar2307/katha/repository"
-	"github.com/sreekar2307/katha/service"
-	"github.com/sreekar2307/katha/service/expense"
-	"github.com/sreekar2307/katha/service/ledger"
-	"github.com/sreekar2307/katha/service/user"
-	"github.com/sreekar2307/katha/simplifier/onelevel"
-	splitterFactory "github.com/sreekar2307/katha/splitter/factory"
+	"github.com/sreekar2307/khata/config"
+	"github.com/sreekar2307/khata/db/sql"
+	"github.com/sreekar2307/khata/pkg/jwt"
+	"github.com/sreekar2307/khata/pkg/jwt/jwtgo"
+	"github.com/sreekar2307/khata/repository"
+	"github.com/sreekar2307/khata/service"
+	"github.com/sreekar2307/khata/service/expense"
+	"github.com/sreekar2307/khata/service/ledger"
+	"github.com/sreekar2307/khata/service/user"
+	"github.com/sreekar2307/khata/simplifier/onelevel"
+	splitterFactory "github.com/sreekar2307/khata/splitter/factory"
 	"gorm.io/gorm"
 )
 

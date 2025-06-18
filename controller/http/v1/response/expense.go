@@ -1,6 +1,6 @@
 package response
 
-import "github.com/sreekar2307/katha/model/table"
+import "github.com/sreekar2307/khata/model/table"
 
 type Expense struct {
 	Amount      uint64  `json:"amountInPaise"`

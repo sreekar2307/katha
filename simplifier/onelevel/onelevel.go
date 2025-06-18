@@ -3,8 +3,8 @@ package onelevel
 import (
 	"context"
 	"fmt"
-	"github.com/sreekar2307/katha/repository"
-	"github.com/sreekar2307/katha/simplifier"
+	"github.com/sreekar2307/khata/repository"
+	"github.com/sreekar2307/khata/simplifier"
 	"gorm.io/gorm"
 	"maps"
 )

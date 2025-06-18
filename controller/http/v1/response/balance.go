@@ -1,8 +1,8 @@
 package response
 
 import (
-	pkgSices "github.com/sreekar2307/katha/pkg/slices"
-	"github.com/sreekar2307/katha/service"
+	pkgSices "github.com/sreekar2307/khata/pkg/slices"
+	"github.com/sreekar2307/khata/service"
 )
 
 type Balance struct {

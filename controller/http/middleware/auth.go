@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/sreekar2307/katha/model/table"
+	"github.com/sreekar2307/khata/model/table"
 )
 
 func (m middleware) UserAuthMiddleware() gin.HandlerFunc {

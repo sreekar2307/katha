@@ -1,8 +1,8 @@
 package v1
 
 import (
-	"github.com/sreekar2307/katha/controller/http"
-	"github.com/sreekar2307/katha/service"
+	"github.com/sreekar2307/khata/controller/http"
+	"github.com/sreekar2307/khata/service"
 )
 
 type controller struct {

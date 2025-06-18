@@ -2,8 +2,8 @@ package service
 
 import (
 	"context"
-	"github.com/sreekar2307/katha/model"
-	"github.com/sreekar2307/katha/model/table"
+	"github.com/sreekar2307/khata/model"
+	"github.com/sreekar2307/khata/model/table"
 )
 
 // Expense is an interface that defines methods for managing expenses, including adding expenses

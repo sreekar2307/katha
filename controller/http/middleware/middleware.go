@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/sreekar2307/katha/service"
+	"github.com/sreekar2307/khata/service"
 )
 
 type middleware struct {

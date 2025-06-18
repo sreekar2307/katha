@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/sreekar2307/katha/model/table"
+	"github.com/sreekar2307/khata/model/table"
 )
 
 func StartSeedCmd(ctx context.Context) error {

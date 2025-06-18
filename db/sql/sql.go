@@ -3,7 +3,7 @@ package sql
 import (
 	"database/sql"
 	"fmt"
-	"github.com/sreekar2307/katha/config"
+	"github.com/sreekar2307/khata/config"
 	"time"
 
 	"gorm.io/driver/postgres"

@@ -1,7 +1,7 @@
 package response
 
 import (
-	"github.com/sreekar2307/katha/service"
+	"github.com/sreekar2307/khata/service"
 )
 
 type SimplifiedView struct {

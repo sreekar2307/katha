@@ -5,11 +5,11 @@ import (
 	stdErrors "errors"
 	"fmt"
 
-	"github.com/sreekar2307/katha/model"
-	"github.com/sreekar2307/katha/model/table"
-	"github.com/sreekar2307/katha/repository"
-	"github.com/sreekar2307/katha/service"
-	splitterFactory "github.com/sreekar2307/katha/splitter/factory"
+	"github.com/sreekar2307/khata/model"
+	"github.com/sreekar2307/khata/model/table"
+	"github.com/sreekar2307/khata/repository"
+	"github.com/sreekar2307/khata/service"
+	splitterFactory "github.com/sreekar2307/khata/splitter/factory"
 	"gorm.io/gorm"
 )
 

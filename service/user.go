@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	"github.com/sreekar2307/katha/model/table"
+	"github.com/sreekar2307/khata/model/table"
 )
 
 // User is an interface that defines methods for user management, including adding users.

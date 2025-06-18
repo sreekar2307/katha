@@ -5,8 +5,8 @@ import (
 	stdErrors "errors"
 	"fmt"
 	"github.com/jackc/pgx/v5/pgconn"
-	"github.com/sreekar2307/katha/errors"
-	"github.com/sreekar2307/katha/model/table"
+	"github.com/sreekar2307/khata/errors"
+	"github.com/sreekar2307/khata/model/table"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

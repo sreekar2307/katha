@@ -1,12 +1,12 @@
 package factory
 
 import (
-	"github.com/sreekar2307/katha/errors"
-	"github.com/sreekar2307/katha/model"
-	"github.com/sreekar2307/katha/splitter"
-	"github.com/sreekar2307/katha/splitter/amount"
-	"github.com/sreekar2307/katha/splitter/equal"
-	"github.com/sreekar2307/katha/splitter/percentage"
+	"github.com/sreekar2307/khata/errors"
+	"github.com/sreekar2307/khata/model"
+	"github.com/sreekar2307/khata/splitter"
+	"github.com/sreekar2307/khata/splitter/amount"
+	"github.com/sreekar2307/khata/splitter/equal"
+	"github.com/sreekar2307/khata/splitter/percentage"
 )
 
 type factory struct{}

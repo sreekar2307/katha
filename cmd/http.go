@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/sreekar2307/katha/controller/http"
-	"github.com/sreekar2307/katha/controller/http/middleware"
-	v1 "github.com/sreekar2307/katha/controller/http/v1"
+	"github.com/sreekar2307/khata/controller/http"
+	"github.com/sreekar2307/khata/controller/http/middleware"
+	v1 "github.com/sreekar2307/khata/controller/http/v1"
 	"log"
 	"time"
 )

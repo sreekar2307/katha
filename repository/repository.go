@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	"github.com/sreekar2307/katha/model/table"
+	"github.com/sreekar2307/khata/model/table"
 	"gorm.io/gorm"
 )
 

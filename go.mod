@@ -1,4 +1,4 @@
-module github.com/sreekar2307/katha
+module github.com/sreekar2307/khata
 
 go 1.24
 

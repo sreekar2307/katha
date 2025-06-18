@@ -1,6 +1,6 @@
 package response
 
-import "github.com/sreekar2307/katha/model/table"
+import "github.com/sreekar2307/khata/model/table"
 
 type User struct {
 	Email string `json:"email"`

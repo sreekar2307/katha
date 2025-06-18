@@ -3,10 +3,10 @@ package ledger
 import (
 	"context"
 	"fmt"
-	"github.com/sreekar2307/katha/model/table"
-	"github.com/sreekar2307/katha/repository"
-	"github.com/sreekar2307/katha/service"
-	"github.com/sreekar2307/katha/simplifier"
+	"github.com/sreekar2307/khata/model/table"
+	"github.com/sreekar2307/khata/repository"
+	"github.com/sreekar2307/khata/service"
+	"github.com/sreekar2307/khata/simplifier"
 	"gorm.io/gorm"
 )
 

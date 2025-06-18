@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	goJwtPkg "github.com/golang-jwt/jwt/v5"
-	"github.com/sreekar2307/katha/pkg/jwt"
+	"github.com/sreekar2307/khata/pkg/jwt"
 )
 
 type gojwt struct {

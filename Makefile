@@ -8,7 +8,7 @@ clean:
 	git add go.mod go.sum
 
 build:
-	go build -o ./bin/katha github.com/sreekar2307/katha/cmd
+	go build -o ./bin/khata github.com/sreekar2307/khata/cmd
 
 run_http: build
 	./bin/katha http
