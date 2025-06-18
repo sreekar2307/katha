@@ -1,6 +1,6 @@
 # Khata – Splitwise-like Expense Sharing App
 
-Khata is a backend service for managing shared expenses, inspired by Splitwise. It allows users to add expenses, split them by amount or percentage, and view their balances with others. The project is written in Go and uses Gin for HTTP, GORM for ORM, and PostgreSQL as the database.
+Katha is a backend service for managing shared expenses, inspired by Splitwise. It allows users to add expenses, split them by amount or percentage, and view their balances with others. The project is written in Go and uses Gin for HTTP, GORM for ORM, and PostgreSQL as the database.
 
 ---
 
@@ -36,7 +36,7 @@ Khata is a backend service for managing shared expenses, inspired by Splitwise. 
 - Go 1.24+
 - Docker (for running PostgreSQL)
 
-### Setup
+### Setup Local
 
 1. **Clone the repository:**
    ```sh
@@ -46,11 +46,11 @@ Khata is a backend service for managing shared expenses, inspired by Splitwise. 
 
 2. **Start PostgreSQL using Docker Compose:**
    ```sh
-   docker-compose up -d
+   docker compose up -d postgres
    ```
 
 3. **Configure the app:**
-   - Edit `config.yaml` if you need to change DB credentials or server settings.
+   - Edit `config.yaml` if you need to change DB credentials or server settings. it should not be necessary if you are using the default Docker setup.
 
 4. **Run database migrations:**
    ```sh
@@ -66,18 +66,41 @@ Khata is a backend service for managing shared expenses, inspired by Splitwise. 
    ```sh
    make http
    ```
-   this will start the server on `localhost:8000` by default.
 
+### Setup Docker
 
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/sreekar2307/khata.git 
+   cd khata
+   ```
+2. **Start all the services:**
+   ```sh
+   docker compose up -d --build
+   ```
+3. **Run the migrations**
+   ```sh
+   docker compose run khata make migrate
+   ```
+4. **Seed the database with test users:**
+   ```sh
+   docker compose run khata make seed
+   ```
 ---
 
 ## Authentication
 
 - Generate a JWT token for a user:
-  ```sh
-   make token user=john.doe@email.com password=password
-  ```
+   - locally:
+     ```sh
+     make token user=john.doe@email.com password=password
+     ```
+    - in Docker:
+      ```sh
+      docker compose run khata make token user=john.doe@email.com password=password
+      ```
 - Use the returned token as a Bearer token in the `Authorization` header for all API requests.
+- Prefix the command 
 
 ---
 
@@ -111,6 +134,6 @@ Edit `config.yaml` to change server or database settings.
 
 ## Postman Collection
 
-[Public Collection](https://github.com/sreekar2307/khata/blob/main/postman/khata.postman_collection.json)
-[Local Environment](https://github.com/sreekar2307/khata/blob/main/postman/local.postman_environment.json)
+[Public Collection](https://github.com/sreekar2307/katha/blob/main/postman/katha.postman_collection.json)
+[Local Environment](https://github.com/sreekar2307/katha/blob/main/postman/local.postman_environment.json)
 

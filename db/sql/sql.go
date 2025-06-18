@@ -11,6 +11,8 @@ import (
 	"gorm.io/gorm/clause"
 )
 
+var numberOfRetries = 3
+
 func NewSqlConnection(sqlSettings config.SqlSettings) (*gorm.DB, error) {
 
 	dsn := fmt.Sprintf(
@@ -29,12 +31,22 @@ func NewSqlConnection(sqlSettings config.SqlSettings) (*gorm.DB, error) {
 	sqlDB.SetMaxOpenConns(sqlSettings.MaxOpenConnections)
 	sqlDB.SetMaxIdleConns(sqlSettings.MaxIdleConnections)
 	sqlDB.SetConnMaxIdleTime(time.Duration(sqlSettings.MaxIdleConnectionTime) * time.Minute)
-	db, err := gorm.Open(postgres.New(postgres.Config{Conn: sqlDB}), &gorm.Config{
-		SkipDefaultTransaction: true,
-	})
-
-	if err != nil {
-		return nil, fmt.Errorf("RDS Open gorm: %w", err)
+	var (
+		db        *gorm.DB
+		dbOpenErr error
+	)
+	for range numberOfRetries {
+		db, dbOpenErr = gorm.Open(postgres.New(postgres.Config{Conn: sqlDB}), &gorm.Config{
+			SkipDefaultTransaction: true,
+		})
+		if dbOpenErr != nil {
+			time.Sleep(2 * time.Second)
+			continue
+		}
+		break
+	}
+	if dbOpenErr != nil {
+		return nil, fmt.Errorf("RDS Open: %w", dbOpenErr)
 	}
 	db = db.Debug()
 

@@ -2,8 +2,9 @@ package config
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v3"
 	"os"
+
+	"gopkg.in/yaml.v3"
 )
 
 type Config struct {
@@ -52,11 +53,12 @@ func New() (conf Config, _ error) {
 	return
 }
 func bindFromEnv(conf *Config) {
-	setIfNotSet := func(field *string, envName string) {
+	setFromENV := func(field *string, envName string) {
 		if os.Getenv(envName) != "" {
 			*field = os.Getenv(envName)
 		}
 	}
-	setIfNotSet(&conf.Server.AuthTokenSecret, "AUTH_TOKEN_SECRET")
-	setIfNotSet(&conf.SQL.PrimaryDatabase.Password, "PRIMARY_DB_PASSWORD")
+	setFromENV(&conf.Server.AuthTokenSecret, "AUTH_TOKEN_SECRET")
+	setFromENV(&conf.SQL.PrimaryDatabase.Password, "PRIMARY_DB_PASSWORD")
+	setFromENV(&conf.SQL.PrimaryDatabase.Host, "PRIMARY_DB_HOST")
 }
