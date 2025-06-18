@@ -23,7 +23,11 @@ type Lends struct {
 	Amount   uint64
 }
 
+// Ledger is an interface that defines methods for retrieving user expenses and balance reports.
 type Ledger interface {
+	// GetUserInvolvedExpenses retrieves a list of expenses that the user is involved in, starting from a given ID
+	// and limited to a specified number of results.
 	GetUserInvolvedExpenses(ctx context.Context, userID uint64, gtId uint64, limit int) ([]SimplifiedView, error)
+	// GetBalanceReport retrieves a balance report for the user, showing amounts owed and lent by the user.
 	GetBalanceReport(ctx context.Context, userID uint64) ([]Owes, []Lends, error)
 }

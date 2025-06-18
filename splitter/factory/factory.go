@@ -11,6 +11,7 @@ import (
 
 type factory struct{}
 
+// SplitterFactory is an interface that defines a method to create a new Splitter based on the split type.
 type SplitterFactory interface {
 	NewSplitter(model.SplitType) (splitter.Splitter, error)
 }

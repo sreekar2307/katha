@@ -15,6 +15,7 @@ func NewPercentageSplitter() splitter.Splitter {
 	return percentageSplitter{}
 }
 
+// percentageSplitter implements the Splitter interface for splitting expenses based on percentages.
 type percentageSplitter struct{}
 
 func (s percentageSplitter) Split(_ context.Context, splits []model.Split, expense table.Expense) ([]table.Ledger, error) {

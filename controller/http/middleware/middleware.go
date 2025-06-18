@@ -10,6 +10,7 @@ type middleware struct {
 }
 
 type Middleware interface {
+	// UserAuthMiddleware returns a gin.HandlerFunc that validates the user's bearer token.
 	UserAuthMiddleware() gin.HandlerFunc
 }
 

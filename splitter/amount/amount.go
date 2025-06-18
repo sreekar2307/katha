@@ -15,6 +15,7 @@ func NewAmountSplitter() splitter.Splitter {
 	return amountSplitter{}
 }
 
+// amountSplitter implements the Splitter interface for splitting expenses based on specified amounts.
 type amountSplitter struct{}
 
 func (s amountSplitter) Split(_ context.Context, splits []model.Split, expense table.Expense) ([]table.Ledger, error) {

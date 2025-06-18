@@ -15,6 +15,7 @@ func NewEqualSplitter() splitter.Splitter {
 	return equalSplitter{}
 }
 
+// equalSplitter implements the Splitter interface for splitting expenses equally among users.
 type equalSplitter struct{}
 
 func (s equalSplitter) Split(_ context.Context, splits []model.Split, expense table.Expense) ([]table.Ledger, error) {
