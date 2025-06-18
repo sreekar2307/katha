@@ -1,0 +1,15 @@
+server:
+  host: localhost
+  port: 8000
+  auth_token_secret: 37d5c2a0eb1ddcb0639fd0f8278f5ba7fec5596aea5bd4e71b0120c7953c5ab5
+
+sql:
+  primary_database:
+    host: localhost
+    port: 5432
+    password: postgres
+    username: postgres
+    db_name: katha
+    max_open_connections: 100
+    max_idle_connections: 10
+    max_idle_connection_time: 3e+11
