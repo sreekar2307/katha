@@ -66,6 +66,8 @@ Khata is a backend service for managing shared expenses, inspired by Splitwise. 
    ```sh
    make http
    ```
+   this will start the server on `localhost:8000` by default.
+
 
 ---
 
