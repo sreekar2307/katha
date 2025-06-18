@@ -37,18 +37,15 @@ func (e expense) AddExpense(
 	if err != nil {
 		return expense, nil, stdErrors.Join(err, fmt.Errorf("failed to create splitter for split type %s", splitType))
 	}
-	ledgers, err := splitter.Split(ctx, splits, expense)
-	if err != nil {
-		return expense, nil, stdErrors.Join(err, fmt.Errorf("failed to split expense"))
-	}
 	tx := e.primaryDB.WithContext(ctx).Begin()
 	defer tx.Rollback()
 
 	if err := e.repository.CreateExpense(ctx, tx, &expense); err != nil {
 		return expense, nil, stdErrors.Join(err, fmt.Errorf("failed to create expense"))
 	}
-	for i := range ledgers {
-		ledgers[i].ExpenseID = expense.ID
+	ledgers, err := splitter.Split(ctx, splits, expense)
+	if err != nil {
+		return expense, nil, stdErrors.Join(err, fmt.Errorf("failed to split expense"))
 	}
 	userIDs := make(map[uint64]bool)
 	for _, ledger := range ledgers {
