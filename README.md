@@ -1,4 +1,4 @@
-# Katha – Splitwise-like Expense Sharing App
+# Khata – Splitwise-like Expense Sharing App
 
 Katha is a backend service for managing shared expenses, inspired by Splitwise. It allows users to add expenses, split them by amount or percentage, and view their balances with others. The project is written in Go and uses Gin for HTTP, GORM for ORM, and PostgreSQL as the database.
 
