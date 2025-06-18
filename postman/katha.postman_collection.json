@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "a774e1ac-7188-4f14-8ec5-c0366f5096c2",
+		"name": "Public",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24608685",
+		"_collection_link": "https://personal-1404.postman.co/workspace/e4875e0a-69d3-4d33-9865-6188cefc0122/collection/24608685-a774e1ac-7188-4f14-8ec5-c0366f5096c2?action=share&source=collection_link&creator=24608685"
+	},
+	"item": [
+		{
+			"name": "New Expense",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"split_type\": \"AMOUNT\",\n    \"split_config\": [\n        {\n            \"user_id\": 2,\n            \"amount\": 5\n        },\n        {\n            \"user_id\": 1,\n            \"amount\": 5\n        }\n    ],\n    \"expense\": {\n        \"amount\": 10,\n        \"description\": \"hello world 3\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/public/v1/expenses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v1",
+						"expenses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Percentage Split",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"split_type\": \"PERCENTAGE\",\n    \"split_config\": [\n        {\n            \"percentage\": 50,\n            \"user_id\": 2\n        },\n        {\n            \"percentage\": 50,\n            \"user_id\": 1\n        }\n    ],\n    \"expense\": {\n        \"amount\": 10000,\n        \"description\": \"hello world 3\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/v1/expenses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"expenses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Jun 2025 18:52:22 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"amountInPaise\": 10000,\n        \"description\": \"hello world 3\",\n        \"lender\": {\n            \"email\": \"john.doe@email1.com\"\n        },\n        \"splits\": [\n            {\n                \"borrower\": {\n                    \"email\": \"john.doe@email.com\"\n                },\n                \"amountInPaise\": 5000\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "Equal Split",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"split_type\": \"EQUAL\",\n    \"split_config\": [\n        {\n            \"user_id\": 2\n        },\n        {\n            \"user_id\": 1\n        }\n    ],\n    \"expense\": {\n        \"amount\": 10000,\n        \"description\": \"hello world 3\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/v1/expenses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"expenses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 03:32:28 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"amountInPaise\": 10000,\n        \"description\": \"hello world 3\",\n        \"lender\": {\n            \"email\": \"john.doe@email1.com\"\n        },\n        \"splits\": [\n            {\n                \"borrower\": {\n                    \"email\": \"john.doe@email.com\"\n                },\n                \"amountInPaise\": 5000\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "Amount Split",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"split_type\": \"AMOUNT\",\n    \"split_config\": [\n        {\n            \"user_id\": 2,\n            \"amount\": 5\n        },\n        {\n            \"user_id\": 1,\n            \"amount\": 5\n        }\n    ],\n    \"expense\": {\n        \"amount\": 10,\n        \"description\": \"hello world 3\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/public/v1/expenses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"expenses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 03:33:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"amountInPaise\": 10,\n        \"description\": \"hello world 3\",\n        \"lender\": {\n            \"email\": \"john.doe@email1.com\"\n        },\n        \"splits\": [\n            {\n                \"borrower\": {\n                    \"email\": \"john.doe@email.com\"\n                },\n                \"amountInPaise\": 5\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Expenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/public/v1/expenses?limit=1&gt_id=16",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v1",
+						"expenses"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "gt_id",
+							"value": "16"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Expense",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/public/v1/expenses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"expenses"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "gt_id",
+									"value": "16",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Jun 2025 18:58:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "294"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 16,\n            \"lender\": {\n                \"email\": \"john.doe@email.com\"\n            },\n            \"borrower\": {\n                \"email\": \"john.doe@email1.com\"\n            },\n            \"description\": \"hello world\",\n            \"amountInPaise\": 50\n        },\n        {\n            \"id\": 24,\n            \"lender\": {\n                \"email\": \"john.doe@email1.com\"\n            },\n            \"borrower\": {\n                \"email\": \"john.doe@email.com\"\n            },\n            \"description\": \"hello world 3\",\n            \"amountInPaise\": 5000\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Balances",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/public/v1/balances",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v1",
+						"balances"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Balance Report",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/public/v1/balances",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"balances"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 02:24:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"lends\": [\n            {\n                \"borrower\": {\n                    \"email\": \"john.doe@email.com\"\n                },\n                \"amountInPaise\": 4950\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jwt_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

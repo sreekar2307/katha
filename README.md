@@ -107,3 +107,8 @@ Edit `config.yaml` to change server or database settings.
 
 ---
 
+## Postman Collection
+
+[Public Collection](https://github.com/sreekar2307/katha/postman/katha.postman_collection.json)
+[Local Environment](https://github.com/sreekar2307/katha/postman/local.postman_environment.json)
+
