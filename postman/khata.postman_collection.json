@@ -309,6 +309,65 @@
 					"body": "{\n    \"data\": {\n        \"lends\": [\n            {\n                \"borrower\": {\n                    \"email\": \"john.doe@email.com\"\n                },\n                \"amountInPaise\": 4950\n            }\n        ]\n    }\n}"
 				}
 			]
+		},
+		{
+			"name": "Balances concise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/public/v1/balances/concise",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v1",
+						"balances",
+						"concise"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Balances concise",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/public/v1/balances/concise",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v1",
+								"balances",
+								"concise"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 04:39:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"owes\": 0,\n        \"lends\": 5\n    }\n}"
+				}
+			]
 		}
 	],
 	"auth": {

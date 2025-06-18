@@ -24,6 +24,7 @@ func NewServer(
 			v1.POST("/expenses", controller.V1.NewExpense())
 			v1.GET("/expenses", controller.V1.Expenses())
 			v1.GET("/balances", controller.V1.Balances())
+			v1.GET("/balances/concise", controller.V1.BalanceConcise())
 
 		}
 	}

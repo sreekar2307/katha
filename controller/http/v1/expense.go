@@ -188,3 +188,25 @@ func (c controller) Balances() gin.HandlerFunc {
 		})
 	}
 }
+
+func (c controller) BalanceConcise() gin.HandlerFunc {
+	return func(ctx *gin.Context) {
+
+		authUser, exists := ctx.Get("user")
+		if !exists {
+			ctx.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
+			return
+		}
+		user := authUser.(table.User)
+
+		owes, lends, err := c.LedgerService.GetBalanceReportConcise(ctx, user.ID)
+		if err != nil {
+			ctx.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to add expense"})
+			return
+		}
+
+		ctx.JSON(http.StatusOK, gin.H{
+			"data": response.NewBalanceConcise(owes, lends),
+		})
+	}
+}

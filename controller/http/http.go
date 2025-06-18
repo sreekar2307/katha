@@ -16,4 +16,5 @@ type V1Controller interface {
 	NewExpense() gin.HandlerFunc
 	Expenses() gin.HandlerFunc
 	Balances() gin.HandlerFunc
+	BalanceConcise() gin.HandlerFunc
 }

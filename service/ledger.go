@@ -30,4 +30,6 @@ type Ledger interface {
 	GetUserInvolvedExpenses(ctx context.Context, userID uint64, gtId uint64, limit int) ([]SimplifiedView, error)
 	// GetBalanceReport retrieves a balance report for the user, showing amounts owed and lent by the user.
 	GetBalanceReport(ctx context.Context, userID uint64) ([]Owes, []Lends, error)
+	// GetBalanceReportConcise retrieves a concise balance report for the user, showing total amounts owed and lent.
+	GetBalanceReportConcise(ctx context.Context, userID uint64) (uint64, uint64, error)
 }

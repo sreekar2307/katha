@@ -99,3 +99,20 @@ func (l ledgerServ) GetBalanceReport(ctx context.Context, userID uint64) ([]serv
 	}
 	return owes, lends, nil
 }
+
+func (l ledgerServ) GetBalanceReportConcise(ctx context.Context, userID uint64) (owes uint64, lends uint64, _ error) {
+	simplified, err := l.simplifier.Simplify(ctx, userID)
+	if err != nil {
+		return 0, 0, fmt.Errorf("failed to simplify ledgers: %w", err)
+	}
+	for lenderID, borrowers := range simplified {
+		for borrowerID, amount := range borrowers {
+			if lenderID == userID {
+				lends += amount
+			} else if borrowerID == userID {
+				owes += amount
+			}
+		}
+	}
+	return owes, lends, nil
+}
