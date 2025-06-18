@@ -9,7 +9,7 @@ sql:
     port: 5432
     password: postgres
     username: postgres
-    db_name: katha
+    db_name: khata
     max_open_connections: 100
     max_idle_connections: 10
     max_idle_connection_time: 3e+11

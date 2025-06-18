@@ -1,6 +1,6 @@
 # Khata – Splitwise-like Expense Sharing App
 
-Katha is a backend service for managing shared expenses, inspired by Splitwise. It allows users to add expenses, split them by amount or percentage, and view their balances with others. The project is written in Go and uses Gin for HTTP, GORM for ORM, and PostgreSQL as the database.
+Khata is a backend service for managing shared expenses, inspired by Splitwise. It allows users to add expenses, split them by amount or percentage, and view their balances with others. The project is written in Go and uses Gin for HTTP, GORM for ORM, and PostgreSQL as the database.
 
 ---
 
@@ -41,7 +41,7 @@ Katha is a backend service for managing shared expenses, inspired by Splitwise. 
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/sreekar2307/khata.git 
-   cd katha
+   cd khata
    ```
 
 2. **Start PostgreSQL using Docker Compose:**
@@ -109,6 +109,6 @@ Edit `config.yaml` to change server or database settings.
 
 ## Postman Collection
 
-[Public Collection](https://github.com/sreekar2307/katha/blob/main/postman/katha.postman_collection.json)
-[Local Environment](https://github.com/sreekar2307/katha/blob/main/postman/local.postman_environment.json)
+[Public Collection](https://github.com/sreekar2307/khata/blob/main/postman/khata.postman_collection.json)
+[Local Environment](https://github.com/sreekar2307/khata/blob/main/postman/local.postman_environment.json)
 
