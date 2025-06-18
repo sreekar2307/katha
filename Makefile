@@ -10,14 +10,14 @@ clean:
 build:
 	go build -o ./bin/khata github.com/sreekar2307/khata/cmd
 
-run_http: build
-	./bin/katha http
+http: build
+	./bin/khata http
 
 token: build
-	./bin/katha token $(user) $(password)
+	./bin/khata token $(user) $(password)
 
 seed: build
-	./bin/katha seed
+	./bin/khata seed
 
 migrate: build
-	./bin/katha migrate
+	./bin/khata migrate
