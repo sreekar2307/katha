@@ -11,10 +11,10 @@ import (
 
 type oneLevelSimplifier struct {
 	primaryDB *gorm.DB
-	repo      repository.Repository
+	repo      repository.LedgerRepository
 }
 
-func NewOneLevelSimplifier(db *gorm.DB, repo repository.Repository) simplifier.Simplifier {
+func NewOneLevelSimplifier(db *gorm.DB, repo repository.LedgerRepository) simplifier.Simplifier {
 	return oneLevelSimplifier{
 		primaryDB: db,
 		repo:      repo,

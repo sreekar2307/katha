@@ -1,0 +1,12 @@
+force-file-write: true
+formatter: gofmt
+log-level: info
+template: testify
+packages:
+  github.com/sreekar2307/khata/repository:
+    config:
+      all: true
+      dir: "repository/mocks"
+      filename: "mocks.go"
+      pkgname: "mocks"
+      structname: "Mock{{.InterfaceName}}"
